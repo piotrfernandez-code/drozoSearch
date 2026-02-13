@@ -1,0 +1,20 @@
+[package]
+name = "drozosearch"
+version = "0.1.0"
+edition = "2021"
+description = "Lightning-fast cross-platform desktop search - drozoSearch"
+
+[dependencies]
+eframe = { version = "0.31", default-features = true }
+tantivy = "0.22"
+ignore = "0.4"
+open = "5"
+dirs = "6"
+chrono = "0.4"
+image = "0.25"
+tray-icon = "0.19"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.5"
+objc2-foundation = { version = "0.2", features = ["NSThread"] }
+objc2-app-kit = { version = "0.2", features = ["NSApplication", "NSRunningApplication"] }
